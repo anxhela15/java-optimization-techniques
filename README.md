@@ -13,90 +13,90 @@ This Maven project demonstrates **practical Java coding techniques** that improv
 ## 🚀 Project Structure & Optimizations
 
 ### 1. `AutoboxingExample.java`
-**🔍 Purpose**: Avoid unnecessary object creation by using primitive types instead of boxed types like `Integer`.
+** Purpose**: Avoid unnecessary object creation by using primitive types instead of boxed types like `Integer`.
 
-**💡 Optimization**:
+** Optimization**:
 - Avoids frequent autoboxing/unboxing.
 - Reduces memory allocation and GC pressure.
 
-**🧪 Tests**:
+** Tests**:
 - `AutoboxingExampleTest` validates the sum logic using both boxed and primitive types.
 
 ---
 
 ### 2. `BufferIOExample.java`
-**🔍 Purpose**: Improve I/O performance by using buffered streams over unbuffered ones.
+** Purpose**: Improve I/O performance by using buffered streams over unbuffered ones.
 
-**💡 Optimization**:
+** Optimization**:
 - Buffered I/O groups read/write operations, reducing expensive system calls.
 - Boosts throughput for file operations.
 
-**🧪 Tests**:
+** Tests**:
 - `BufferIOExampleTest` reads a file with both buffered and unbuffered strategies and ensures the results match.
 
 ---
 
 ### 3. `ThreadLocalExample.java`
-**🔍 Purpose**: Eliminate synchronization bottlenecks by giving each thread its own instance of an object.
+** Purpose**: Eliminate synchronization bottlenecks by giving each thread its own instance of an object.
 
-**💡 Optimization**:
+** Optimization**:
 - Uses `ThreadLocal` to make `SimpleDateFormat` thread-safe without synchronization.
 - Prevents contention in multi-threaded environments.
 
-**🧪 Tests**:
+** Tests**:
 - `ThreadLocalExampleTest` checks correct date formatting using a known date string.
 
 ---
 
 ### 4. `ConcurrentCacheExample.java`
-**🔍 Purpose**: Use a high-performance thread-safe map (`ConcurrentHashMap`) for shared caching.
+** Purpose**: Use a high-performance thread-safe map (`ConcurrentHashMap`) for shared caching.
 
-**💡 Optimization**:
+** Optimization**:
 - Avoids global synchronization by segmenting locks internally.
 - Scales well with multiple threads using `computeIfAbsent`.
 
-**🧪 Tests**:
+** Tests**:
 - `ConcurrentCacheExampleTest` checks correctness and concurrency by running parallel threads.
 
 ---
 
 ### 5. `StringConcatOptimizer.java`
-**🔍 Purpose**: Avoid repeated string concatenation using `+` in loops.
+** Purpose**: Avoid repeated string concatenation using `+` in loops.
 
-**💡 Optimization**:
+** Optimization**:
 - Using `StringBuilder` inside loops prevents creation of intermediate `String` objects.
 - Reduces memory churn and GC pressure.
 
-**🧪 Tests**:
+** Tests**:
 - Validates string concatenation using `StringBuilder` vs direct `+` approach.
 
 ---
 
 ### 6. `LoopOptimizationExample.java`
-**🔍 Purpose**: Reduce redundant method calls inside loops.
+** Purpose**: Reduce redundant method calls inside loops.
 
-**💡 Optimization**:
+** Optimization**:
 - Cache the result of `list.size()` in a local variable.
 - Prefer enhanced for-loops which are optimized by the compiler.
 
-**🧪 Tests**:
+** Tests**:
 - Validates both loop behaviors with expected iteration outputs.
 
 ---
 
 ### 7. `MemoizationExample.java`
-**🔍 Purpose**: Avoid redundant computation of expensive operations.
+** Purpose**: Avoid redundant computation of expensive operations.
 
-**💡 Optimization**:
+** Optimization**:
 - Implements caching using `Map` and `computeIfAbsent`.
 - Common inputs are only computed once.
 
-**🧪 Tests**:
+** Tests**:
 - Validates caching by calling the method repeatedly with the same and different inputs.
 
 ---
 
-## 🧪 Running the Tests
+## Running the Tests
 
 Use the following command to run all unit tests:
 
